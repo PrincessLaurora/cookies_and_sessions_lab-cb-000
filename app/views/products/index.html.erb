@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= form_tag ({controller: 'products',
   action: 'add',
   method: 'post'}) do %>
@@ -9,4 +10,19 @@
 <h1>Your Cart:</h1>
   <% cart.each do |product| %>
     <li><%= product%></li>
+=======
+
+
+    <% cart.each do |product| %>
+      <%= product%>
+      <%end%>
+
+      <%= form_for(product) do |f| %>
+
+      <div class="field"> <%= f.label :name %><br>
+      <%= f.text_field :name %></div>
+
+      <div class="actions"><%= f.submit 'Submit', :class => 'btn btn-primary' %></div>
+
+>>>>>>> abef618b9fb12f124280c7b86ddb3600a34d3862
     <%end%>
