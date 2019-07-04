@@ -13,6 +13,6 @@ class ProductsController < ApplicationController
   def add
     cart << @product.id
     session[:cart] = cart
-  end  
+  end
 
 end
